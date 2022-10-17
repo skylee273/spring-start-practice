@@ -10,6 +10,7 @@ import hello.springstart.service.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceTest {
@@ -24,7 +25,7 @@ class OrderServiceTest {
         memberService.join(member);
 
         Order order = orderService.createOrder(memberId, "itemA", 10000);
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+        assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 
 }
