@@ -7,6 +7,7 @@ import hello.springstart.service.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
@@ -23,7 +24,7 @@ class MemberServiceTest {
         Member findMember = memberService.findMember(1L);
 
         //tehn
-        Assertions.assertThat(member).isEqualTo(findMember);
+        assertThat(member).isEqualTo(findMember);
     }
 
 
